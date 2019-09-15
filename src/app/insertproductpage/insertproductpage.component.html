@@ -1,0 +1,88 @@
+<!--================Insert Product Area =================-->
+<div class="product_image_area">
+    <div class="container">
+
+        <!-- <ul class="list-group">
+            <li class="list-group-item" *ngFor="let post of posts">
+                {{post.title}}</li>
+        </ul> -->
+        <!--================Insert Product Area =================-->
+
+        <form #userForm="ngForm">
+
+            {{userForm.value | json}}
+
+            <hr/>
+
+            {{productdetails | json}}
+
+            <!-- <div class="form-group">
+                <label for="exampleInputEmail1">Trial*</label>
+                <input (keyup.enter)="onSavePost(title)" #title type="text" class="form-control" name="Trial" [(ngModel)] = "productdetails.Name">
+            </div> -->
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Brand*</label>
+                <input type="text" class="form-control" id="Brand" placeholder="Enter Product Brand"
+                    name="productbrand" [(ngModel)] = "productdetails.productbrand">
+            </div>
+            <div class="form-group">
+                <label for="productname">Name*</label>
+                <input  type="text" class="form-control" id="productname" placeholder="Enter Product Name"
+                    name="productname" [(ngModel)] = "productdetails.productname">
+            </div>
+            <div class="form-group">
+                <label for="Description">Description*</label>
+                <input  type="text" class="form-control" id="Description"
+                    placeholder="Enter Product Description" name="productdescription" [(ngModel)] = "productdetails.productdescription">
+            </div>
+
+            <div class="form-group">
+                <label for="Availability">Availability*</label>
+                <input type="number" class="form-control" id="Availability"
+                    placeholder="Enter Product Availability" name="productavailability" [(ngModel)] = "productdetails.productavailability">
+            </div>
+
+            <div class="form-group">
+                <label for="MarkedPrice">Marked Price</label>
+                <input type="number" class="form-control" id="MarkedPrice"
+                    placeholder="Enter Product Marked Price" name="productmarkedprice" [(ngModel)] = "productdetails.productmarkedprice">
+            </div>
+
+            <div class="form-group">
+                <label for="SellingPrice">Selling Price*</label>
+                <input type="number" class="form-control" id="SellingPrice"
+                    placeholder="Enter Product Selling Price" name="productsellingprice" [(ngModel)] = "productdetails.productsellingprice">
+            </div>
+
+            <div class="form-group">
+                <label for="Category">Category*</label>
+                <select class="form-control" id="Category" name="productcategory" [(ngModel)] = "productdetails.productcategory">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload Photo*</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01" name="Image" [(ngModel)] = "productdetails.Image">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </div> -->
+
+            <button type="submit" class="btn btn-primary" (click)="onSaveProduct()">Add Product</button>
+
+        </form>
+
+        <!-- Insert product Area End -->
+
+    </div>
+</div>
+<!--================End Single Product Area =================-->
